@@ -49,10 +49,7 @@ Book vaccinations prototype
                 What is {{ data['first-name'] | default('John') }} {{ data['last-name'] | default('Doe') }}'s NHS number?
               </label>
             </h1>
-            <div class="nhsuk-hint" id="nhs-number-hint">
-              An NHS number is a 10 digit number that you find on any letter the NHS has sent. For example, 999 123 4567.
-            </div>
-            <input class="nhsuk-input nhsuk-input--width-10" id="nhs-number" name="nhs-number" type="text" aria-describedby="nhs-number-hint" inputmode="numeric">
+<div class="nhsuk-hint" id="nhs-number-hint">This is a 10 digit number (like 999 123 4567) that you can find on an NHS letter, prescription or in the NHS App</div>            <input class="nhsuk-input nhsuk-input--width-10" id="nhs-number" name="nhs-number" type="text" aria-describedby="nhs-number-hint" inputmode="numeric">
           </div>
   
           <button class="nhsuk-button" data-module="nhsuk-button" type="submit">

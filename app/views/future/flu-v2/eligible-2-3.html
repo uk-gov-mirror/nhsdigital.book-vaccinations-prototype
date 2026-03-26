@@ -41,16 +41,16 @@ Book vaccinations prototype
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
 
-        <form action="twoDoseFlu" method="get" class="form">
+        <form action="newTwoDoseFlu" method="get" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend">
             <h1 class="nhsuk-heading-l">
-              Does {{ data['first-name'] | default('John') }} {{ data['last-name'] | default('Doe') }} need to get their flu vaccination in 2 doses?
+              Do you need to get your flu vaccine in 2 doses?
                           </h1>
           </legend>
 
-          <p class="nhsuk-body">{{ data['first-name'] | default('John') }} {{ data['last-name'] | default('Doe') }} will need 2 doses if they:          </p>
+          <p class="nhsuk-body">You will need 2 doses if you:          </p>
           
 <ul class="nhsuk-list nhsuk-list--bullet">
   <li>are in a clinical risk group or</li>
@@ -59,7 +59,6 @@ Book vaccinations prototype
 
 <p class="nhsuk-body">The 2 doses need to be at least 4 weeks apart.</p>
 
-<p class="nhsuk-body"><a href="https://www.nhs.uk/vaccinations/child-flu-vaccine/" target="_blank">Find out more about the child flu vaccination</a> (opens in a new tab)</p>
 
 
         <div class="nhsuk-form-group">
@@ -87,6 +86,7 @@ Book vaccinations prototype
           Continue
         </button>
     </form>
+<p class="nhsuk-body"><a href="https://www.nhs.uk/vaccinations/child-flu-vaccine/" target="_blank">Find out more about the child flu vaccination</a> (opens in a new tab)</p>
       
       </div>
       <!-- End of content -->

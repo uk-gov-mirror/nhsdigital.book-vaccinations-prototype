@@ -117,7 +117,7 @@ Book vaccinations prototype
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="person-radio-yes" name="radioGroup" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="person-radio-yes">
-                Yes, continue
+                Yes, these details are correct
             </label>
             </div>
       
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (age >= 65 && age <= 120) {
           window.location.href = "proxy-o65-self-referral";
         } else if (age >= 2 && age <= 3) {
-          window.location.href = "eligible-2-3";
+          window.location.href = "proxy-eligible-2-3";
         } else if (age >= 3 && age <= 18) {
           window.location.href = "add-person-early";
         } else {
