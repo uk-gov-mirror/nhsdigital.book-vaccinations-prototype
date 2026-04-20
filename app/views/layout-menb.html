@@ -22,38 +22,31 @@
 {% block header %}
   {{ header({
     "service": {
-        "text": "Book a vaccination",
+        "text": "Book a menB vaccination",
         "href": "/"
       }
     })
   }}
+
 {% endblock %}
 
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
-{{ footer({
-  meta: {
+  {{ footer({
+meta: {
     items: [
       {
         href: "/",
         text: "Home"
       },
       {
-        href: "https://design-history.prevention-services.nhs.uk/",
-        text: "Design history"
-      },
-      {
-        href: "other-work/index",
-        text: "Useful stuff"
-      },
-            {
-        href: "menb/index",
-        text: "MenB"
+        href: "local-booking",
+        text: "local booking"
       }
     ]
   }
-}) }}
+  })}}
 {% endblock %}
 
 {% block bodyEnd %}
