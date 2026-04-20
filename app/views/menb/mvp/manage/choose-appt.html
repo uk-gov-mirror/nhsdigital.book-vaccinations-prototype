@@ -41,20 +41,15 @@ Book vaccinations prototype
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
 
-      <form action="access-needs" method="get" class="form">
+      <form action="co-admin" method="get" class="form">
 
         <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
               <legend class="nhsuk-fieldset__legend nhsuk-label--l">
                 <h1 class="nhsuk-fieldset__heading">
-                  Find a site near where you'd like the appointment
+                  You can now choose an appointment
                 </h1>
               </legend>
-          
-              <label class="nhsuk-label" for="locationInput">
-                Enter a town, city or postcode in England
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-20" id="locationInput" name="location-input" type="text">            
 
             </fieldset>
           
@@ -69,25 +64,4 @@ Book vaccinations prototype
 
     </div>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector(".form");
-        const input = document.getElementById("locationInput");
-    
-        form.addEventListener("submit", function (event) {
-            let location = input.value.trim(); // Store input in a variable
-            const postcodePattern = /^[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d?[A-Z]{0,2}$/i;
-    
-            // Change form action dynamically before submitting
-            if (postcodePattern.test(location)) {
-                form.action = `choose-pharmacy`; // Backend will handle {{ data['location-input'] }}
-            } else {
-                form.action = `find-by-city`; // Backend will handle {{ data['location-input'] }}
-            }
-    
-            // Form now submits normally, and data is available on the server-side
-        });
-    });
-    </script>
-        {% endblock %}
+{% endblock %}
