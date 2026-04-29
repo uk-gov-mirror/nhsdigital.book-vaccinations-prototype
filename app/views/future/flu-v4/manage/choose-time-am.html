@@ -3,8 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-menb.html' %}
-<!-- 
+{% extends 'layout-flu.html' %}<!-- 
   In /views/layout.html you can:
     - change the header and footer 
     - add custom CSS and JavaScript
@@ -41,7 +40,7 @@ Book vaccinations prototype
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
 
-        <form action="cya" method="get" class="form">
+        <form action="confirm-change" method="get" class="form">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend">
@@ -61,7 +60,7 @@ Book vaccinations prototype
             
           <div class="nhsuk-radios" data-module="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="am" required>
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="am">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
                 {{data['hour']}}am
               </label>
@@ -111,9 +110,9 @@ Book vaccinations prototype
         </button>
     </form>
 
-    <a class="nhsuk-button nhsuk-button--secondary" href="choose-pharmacy-2">
-      Choose a different pharmacy
-    </a>
+    <a class="nhsuk-button nhsuk-button--secondary" href="choose-site">
+        Choose a different site
+      </a>
 
       
       </div>

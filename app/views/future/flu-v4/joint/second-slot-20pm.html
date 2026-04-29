@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-menb.html' %}
+{% extends 'layout-flu.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -41,12 +41,12 @@ Book vaccinations prototype
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
 
-        <form action="cya" method="get" class="form">
+        <form action="confirmation-messages" method="get" class="form">
 
         <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend">
-            <h1 class="nhsuk-heading-l">
-                Choose an appointment time for {{ data['first-name'] | default('John') }} {{ data['last-name'] | default('Doe') }}
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+                Choose an appointment time for {{ data['first-name2'] | default('Jane') }} {{ data['last-name2'] | default('Doe') }}
               </h1>
           </legend>
 
@@ -55,52 +55,74 @@ Book vaccinations prototype
 
 
           <p class="nhsuk-body-l">Available appointment times for <span class="nhsuk-u-font-weight-bold"> {{data['date']}}</span></p>
+
+          <h3 class="nhsuk-heading-m">Times chosen</h3>
+          
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                {{ data['first-name'] | default('John') }} {{ data['last-name'] | default('Doe') }}
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                {{data['hour'] | default('10') }}{{data['time'] | default(':30am') }}
+              </dd>
+          
+          
+            </div>
+          
+          
+          </dl>
+
       
+          <div class="nhsuk-hint" id="contact-hint">
+            Select the second appointment slot for your joint booking
+          </div>
 
         <div class="nhsuk-form-group">
             
           <div class="nhsuk-radios" data-module="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="am" required>
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time-2" type="radio" value=":10pm">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                {{data['hour']}}am
+                {{data['hour']}}:10pm
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value=":10am">
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time-2" type="radio" value=":30pm">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                {{data['hour']}}:10am
+                {{data['hour']}}:30pm
               </label>
             </div>
             
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value=":20am">
+            <!--<div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="8:20am">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                {{data['hour']}}:20am
+                8:20am
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value=":30am">
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="8:30am">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                {{data['hour']}}:30am
+                8:30am
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value=":40am">
+              <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="8:40am">
               <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                {{data['hour']}}:40am
+                8:40am
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value=":50am">
+                <input class="nhsuk-radios__input" id="appt-time-radio" name="time" type="radio" value="8:50am">
                 <label class="nhsuk-label nhsuk-radios__label" for="appt-time-radio">
-                  {{data['hour']}}:50am
+                  8:50am
                 </label>
-              </div>
+              </div>-->
       
           </div>
           </div>
@@ -111,7 +133,7 @@ Book vaccinations prototype
         </button>
     </form>
 
-    <a class="nhsuk-button nhsuk-button--secondary" href="choose-pharmacy-2">
+    <a class="nhsuk-button nhsuk-button--secondary" href="choose-pharmacy">
       Choose a different pharmacy
     </a>
 

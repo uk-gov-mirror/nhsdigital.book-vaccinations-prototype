@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-menb.html' %}
+{% extends 'layout-flu.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -50,6 +50,11 @@ Book vaccinations prototype
           </legend>
           <p>{{data['pharmacy']}}</p>
 
+          <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+
+  <p>Appointments are available from 1 October onwards.</p>
+</div>
 
           <p class="nhsuk-body-l">Next 10 available days</p>
         <div class="nhsuk-form-group">
@@ -189,7 +194,7 @@ Book vaccinations prototype
         </button>
     </form>
 
-    <a class="nhsuk-button nhsuk-button--secondary" href="choose-pharmacy">
+    <a class="nhsuk-button nhsuk-button--secondary" href="choose-site">
         Choose a different site
       </a>
 
